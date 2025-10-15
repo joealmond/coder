@@ -1,6 +1,6 @@
 {
   "name": "Custom Coder Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
@@ -8,14 +8,10 @@
     },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22.20.0"
-    },
-    "ghcr.io/coder/features/code-server:1": {
-      "port": 13337
     }
   },
-
-  "postCreateCommand": "echo 'Workspace is ready!'",
-
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y curl && curl -fsSL https://code-server.dev/install.sh | sh",
+  "postStartCommand": "code-server --auth none --port 13337 &",
   "customizations": {
     "coder": {
       "apps": [
