@@ -1,0 +1,17 @@
+{
+  "name": "My Custom Coder Environment",
+
+  // This is the base operating system for your workspace.
+  // It's a standard, clean Ubuntu image from Microsoft.
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  // This "features" block is where you can easily add tools.
+  "features": {
+    // This feature installs common helpful tools like Git, curl, and zsh.
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+
+  // This command runs AFTER the container is created.
+  // We are just making it print a simple message so it finishes instantly.
+  "postCreateCommand": "echo 'Workspace is ready!'"
+}
