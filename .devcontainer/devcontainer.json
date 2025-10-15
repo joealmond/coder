@@ -1,6 +1,6 @@
 {
   "name": "Custom Coder Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
 
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
@@ -13,7 +13,9 @@
       "port": 13337
     }
   },
+
   "postCreateCommand": "echo 'Workspace is ready!'",
+
   "customizations": {
     "coder": {
       "apps": [
