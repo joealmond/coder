@@ -8,8 +8,24 @@
     },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22.20.0"
+    },
+    "ghcr.io/coder/features/code-server:1": {
+      "port": 13337
     }
   },
-
-  "postCreateCommand": "echo 'Workspace is ready!'"
+  "postCreateCommand": "echo 'Workspace is ready!'",
+  "customizations": {
+    "coder": {
+      "apps": [
+        {
+          "name": "code-server",
+          "port": 13337,
+          "icon": "/icon/code.svg",
+          "health": {
+            "url": "http://localhost:13337/healthz"
+          }
+        }
+      ]
+    }
+  }
 }
