@@ -4,13 +4,7 @@
 
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {},
-
-    // This block installs Node.js using the official dev container feature
     "ghcr.io/devcontainers/features/node:1": {
-      // This is the key part: it tells the feature to install NVM
-      "installNvm": true,
-
-      // This tells NVM to install and use the latest LTS version of Node.js by default.
       "version": "lts"
     }
   },
